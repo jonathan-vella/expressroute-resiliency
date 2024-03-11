@@ -25,12 +25,13 @@ This article is co-authored by Microsoft colleague [David Santiago](https://gith
 This article focuses on [ExpressRoute](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction) Private Peering only, to connect an On-Prem network and VNets in an Azure hub-and-spoke or Virtual WAN environment.
 
 ExpressRoute connectivity is provided in [ExpressRoute peering locations](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-locations). ExpressRoute peering locations are entry points into the Microsoft backbone, [Azure regions](https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/#overview) are where the Azure resources are hosted: distinct concepts at different locations. 
+
  
 # 1. ExpressRoute components
 
 3 main components: the Circuit, the Gateway and the Connection.
 
-![](<images/er-architecture.png>)
+![](<images/er-components.png>)
 
 | **Components** | **Connectivity** | **Location** |
 |---|---|---|
@@ -39,6 +40,8 @@ ExpressRoute connectivity is provided in [ExpressRoute peering locations](https:
 |ExpressRoute Connection|Virtual connection between the MSEE and the ExpressRoute Gateway|ExpressRoute location to Azure region|
 
 The provider must ensure redundant connectivity to either the customer edge routers or their MPLS edge routers.
+
+![](<images/er-architecture.png>)
 
 # 2. ExpressRoute models
 
