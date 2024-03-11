@@ -142,7 +142,7 @@ AZ-redundant ExpressRoute Gateway instances are distributed across different Ava
 
 ## 3.4. Max advertised prefix limit exceeded
 
-As per [Route Advertisement limits documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#route-advertisement-limits), it is important to note that the number of routes advertised from Azure to On-Prem **is not the same** as from On-Prem to Azure.
+As per [Route Advertisement limits documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#route-advertisement-limits), it is important to note that the max number of routes advertised from Azure to On-Prem **is not the same** as from On-Prem to Azure.
 
 ![](images/route-advertisement-limits.png)
 
