@@ -41,7 +41,6 @@ ExpressRoute connectivity is provided in [ExpressRoute peering locations](https:
 
 The provider must ensure redundant connectivity to either the customer edge routers or their MPLS edge routers.
 
-![](<images/er-architecture.png>)
 
 # 2. ExpressRoute models
 
@@ -81,6 +80,8 @@ Adam Stuart's [video](https://youtu.be/Yk5bFWhdVJg?si=tjix2A-ity2sLmjp) is anoth
 
 ## 3.1. ExpressRoute peering location failure
 
+![](images/er-peering-location-failure.png)
+
 ### Solution #1: geo-redundant ExpressRoute circuits
 
 To address ExpressRoute peering location failures, the recommended solution is to build a resilient design as outlined in [this article](https://learn.microsoft.com/en-us/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering) and illustrated below:
@@ -114,6 +115,8 @@ ExpressRoute and VPN can also be combined in an Active-Passive configuration to 
 
 ## 3.2. On-Prem misconfigurations/failures and MSEE maintenances
 
+![](images/er-msee-maintenance.png)
+
 During an ExpressRoute Circuit maintenance, one link out of the 2 fibers connecting the MSEEs and provider equipments remains available. AS-prepending is used by Microsoft to force traffic over the remaining link. 
 
 To prevent conflicts between Microsoft AS-prepending and On-Prem routing and to maintain On-Prem network resiliency, it is important to plan for this scenario and operate both links of an ER circuit (highlighted in yellow) as [Active/Active](https://learn.microsoft.com/en-us/azure/expressroute/designing-for-high-availability-with-expressroute#active-active-connections) when in nominal mode. 
@@ -125,6 +128,8 @@ To prevent a single point of failure, it also recommended to terminate the prima
 More details in [this video](https://www.youtube.com/watch?v=CuXOszhSWjc).
 
 ## 3.3. Availability Zone Failure
+
+![](images/er-az-failure.png)
 
 The ExpressRoute Gateway instances in Azure connect VNets and MSEE routers by handling BGP route exchanges between them.
 
