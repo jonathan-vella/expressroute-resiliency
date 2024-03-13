@@ -20,7 +20,7 @@ This article is co-authored by Microsoft colleague [David Santiago](https://gith
 
 # Scope
 
-> No breaking news here, just an illustrated recap of the recommendations and attention points highlighted here and there in the [Microsoft Expressroute documentation](https://learn.microsoft.com/en-us/azure/expressroute/). 
+> No breaking news here, just an illustrated recap of the recommendations and attention points highlighted here and there in the [Microsoft ExpressRoute documentation](https://learn.microsoft.com/en-us/azure/expressroute/). 
 
 This article focuses on [ExpressRoute](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction) Private Peering only, to connect an On-Prem network and VNets in an Azure hub-and-spoke or Virtual WAN environment.
 
@@ -157,3 +157,7 @@ As per [Route Advertisement limits documentation](https://learn.microsoft.com/en
 [Custom alerts](https://learn.microsoft.com/en-us/azure/expressroute/how-to-custom-route-alert) can be configured to monitor advertised routes over ExpressRoute.
 
  It is essential to consider the ExpressRoute Circuit SKU and the specific route advertisement limit it offers while planning your network architecture.
+
+# Additional resources
+
+* Common ExpressRoute design errors [in video](https://www.youtube.com/watch?v=b1CEte07IqA).
